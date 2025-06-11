@@ -1,0 +1,29 @@
+\clearpage
+\vspace{0.3cm}
+{\color{gray}\hrule}
+\section{Onderzoeksvragen}
+\vspace{0.3cm}
+{\color{gray}\hrule}
+
+\begin{multicols}{2}
+\subsection{Hoofdvraag}
+Hoe kan een neuraal netwerk op basis van simulatiegegevens het gedrag van een PID-regelaar modelleren voor hoogtecontrole van een pingpongbal?
+\subsection{Deelvragen}
+\begin{enumerate}
+    \item Hoe werkt een PID-regelaar en hoe wordt deze toegepast?
+    \item Welke soorten neurale netwerken zijn geschikt?
+    \item Hoe verzamelen we trainingsdata?
+    \item Welke netwerkarchitectuur (bijv. feedforward, recurrent) is het meest geschikt voor dit type regelprobleem?
+    \item Hoe kunnen loss-functies en optimalisatietechnieken afgestemd worden op het gedrag van een PID-regelaar?
+    \item Op welke manier kan de nauwkeurigheid van het getrainde model geverifieerd worden binnen de simulatieomgeving?
+    \item Hoe beïnvloedt de kwaliteit en spreiding van de trainingsdata de prestaties van het netwerk?
+    \item Welke stappen zijn nodig om het getrainde model voor overdracht geschikt te maken (documentatie, export)?
+\end{enumerate}
+
+\begin{itemize}
+    \item Prestaties in de simulatieomgeving
+    \item Selecteren van relevante features en output (bijv. setpoint, huidige hoogte, stuurwaarde).
+    \item Trainen en finetunen van het netwerk in Python (TensorFlow / PyTorch).
+    \item Resultaten documenteren t.b.v. overdracht aan Team 2.
+\end{itemize}
+\end{multicols}
