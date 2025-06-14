@@ -13,7 +13,9 @@ De begeleidende docent heeft de vraag gesteld of deze traditionele regelmethode 
 
 Dit onderzoek is relevant omdat het laat zien hoe klassieke regeltechniek vervangen kan worden door moderne, zelflerende systeem. Daarnaast sluit het aan bij actuele ontwikkelingen binnen de techniek en biedt het studenten inzicht in zowel embedded systemen als kunstmatige intelligentie. Uiteindelijk is het doel om een demonstratie-opstelling te creëren die gebruikt kan worden tijdens bijvoorbeeld open dagen, om zo op een toegankelijke manier beide technieken te tonen.
 
-Het doel van dit onderzoek is om te onderzoeken of een neuraal netwerk het gedrag van een PID-regelaar effectief kan nabootsen of verbeteren in een systeem waarbij een pingpongbal op een ingestelde hoogte wordt gehouden. Hierbij wordt een model ontwikkeld, getraind en geëvalueerd in een gesimuleerde omgeving. Uiteindelijk moet het model geschikt zijn voor implementatie op een embedded platform, met als doel een stabiele en nauwkeurige hoogtecontrole te realiseren. Het onderzoek richt zich op zowel de technische haalbaarheid als de vergelijking met de bestaande PID-regelaar. we gaan in dit onderzoek niet in op de implementatie van een neuraal netwerk in een embedded omgeving, maar er wordt wel rekening gehouden met dat het uiteindelijk in een embedded omgeving geimplementeerd moet worden. In dit onderzoek wordt de nadruk gelegd op of het mogelijk is om een neuraal netwerk het PID-regelaar gedrag te laten nabootsen en hoe dit zich verhoudt tot de traditionele PID-regelaar.
+Het doel van dit onderzoek is om te onderzoeken of een neuraal netwerk het gedrag van een PID-regelaar kan nabootsen of verbeteren in een systeem waarbij een pingpongbal op een ingestelde hoogte wordt gehouden. Hierbij wordt een model ontwikkeld, getraind en geëvalueerd in een gesimuleerde omgeving. Uiteindelijk moet het model geschikt zijn voor implementatie op een embedded platform, met als doel een stabiele en nauwkeurige hoogtecontrole te realiseren. Het onderzoek richt zich op zowel de technische haalbaarheid als de vergelijking met de bestaande PID-regelaar. we gaan in dit onderzoek niet in op de implementatie van een neuraal netwerk in een embedded omgeving, maar er wordt wel rekening gehouden met dat het uiteindelijk in een embedded omgeving geimplementeerd moet worden. In dit onderzoek wordt de nadruk gelegd op of het mogelijk is om een neuraal netwerk het PID-regelaar gedrag te laten nabootsen en hoe dit zich verhoudt tot de traditionele PID-regelaar.
+
+Voor dit onderzoek wordt zal er rekening gehouden worden met dat het neuraal netwerk op een **NXP FRDM-MCXN947 Development board** microcontroller moet komen. in het verloop zal van het onderzoek wordt er rekening gehouden met de beperkingen van deze microcontroller, zoals geheugen- en rekenkrachtbeperkingen. Dit is belangrijk omdat het uiteindelijke doel is om het getrainde model op deze microcontroller te implementeren. De NXP FRDM-MCXN947 Development board is gekozen omdat deze geschikt is voor embedded toepassingen en voldoende mogelijkheden biedt voor het uitvoeren van machine learning taken.
 
 Voor dit onderzoek zijn er een aantal onderzoeksvragen geformuleerd die uiteindelijk de hoofdvraag van dit onderszoek moeten beantwoorden:
 \begin{enumerate}
@@ -24,13 +26,8 @@ Voor dit onderzoek zijn er een aantal onderzoeksvragen geformuleerd die uiteinde
   \item Wat zijn de beperkingen van het gebruik van een neuraal netwerk in een embedded omgeving?
 \end{enumerate}
 
+In dit rapport wordt eerst de benodigde theorie besproken (hoofdstuk 2), gevolgd door de gebruikte methoden (hoofdstuk 3) waarin we dit onderzoek doen. Daarna worden de resultaten gepresenteerd (hoofdstuk 4) en besproken (hoofdstuk 5). Het rapport sluit af met conclusies en aanbeveling (Hoofdstuk 6).Volgens \cite{Bowker1985} is ...
+
 aan het einden van het onderzoek zullen deze deelvragen worden beantwoord en onderbouwd, zodat de hoofdvraag kan worden beantwoord: \textit{Is het mogelijk om een PID-regelaar te vervangen door een AI?}
 
-Voor dit onderzoek wordt zal er rekening gehouden worden met dat het neuraal netwerk op een **NXP FRDM-MCXN947 Development board** microcontroller moet komen. in het verloop zal van het onderzoek wordt er rekening gehouden met de beperkingen van deze microcontroller, zoals geheugen- en rekenkrachtbeperkingen. Dit is belangrijk omdat het uiteindelijke doel is om het getrainde model op deze microcontroller te implementeren. De NXP FRDM-MCXN947 Development board is gekozen omdat deze geschikt is voor embedded toepassingen en voldoende mogelijkheden biedt voor het uitvoeren van machine learning taken.
-
-
-
-In dit rapport wordt eerst de benodigde theorie besproken (hoofdstuk 2), gevolgd door de gebruikte methoden (hoofdstuk 3) waarin we dit onderzoek doen. Daarna worden de resultaten gepresenteerd (hoofdstuk 4) en besproken (hoofdstuk 5). Het rapport sluit af met conclusies en aanbeveling (Hoofdstuk 6).
-
 Een neuraal netwerk\footnote{Een \textit{neuraal netwerk} is een model geïnspireerd op het menselijk brein.} wordt getraind met data.
-
