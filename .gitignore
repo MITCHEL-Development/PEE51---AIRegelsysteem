@@ -54,6 +54,7 @@ $Workspace/
 # Editor directories and files
 .vscode/
 .idea/
+.gitignore
 *.sublime-project
 *.sublime-workspace
 
