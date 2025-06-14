@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1749920381.24683 "main.aux" "main.bbl" "main" 1749921148.37677 0
+["bibtex main"] 1749922486.8263 "main.aux" "main.bbl" "main" 1749922486.91363 2
   "./references.bib" 1749920347.83391 1177 410f8e38caedc3bf6aa57530fd1ad4b4 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1749921148.15313 3038 8094d087505449e5cf8e6a8e30f55b8a "pdflatex"
+  "main.aux" 1749922486.82506 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1749921147.47887 "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/PEE51 - Onderzoek/echter_onderzoek/main.tex" "main.pdf" "main" 1749921148.37689 2
+["pdflatex"] 1749922485.79569 "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/PEE51 - Onderzoek/echter_onderzoek/main.tex" "main.pdf" "main" 1749922486.75662 2
   "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/PEE51 - Onderzoek/echter_onderzoek/main.tex" 1749921146.15939 3595 0b1b2a55399c6227f627bb0628ea33c8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc" 1561323594 2496 4d35740f3a177992ff7b134746c0a1db ""
@@ -138,14 +138,14 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1739805417 8221424 01c16b3167dbbbfe89317ec208a5b945 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "afbeeldingen/Neuraalnetwerkpng.png" 1749900028.86383 50949 b6804be9795e464c00052c13005698fe ""
-  "main.aux" 1749921148.15313 3038 8094d087505449e5cf8e6a8e30f55b8a "pdflatex"
-  "main.bbl" 1749920381.32692 776 1dfe852a08b662de874a15b36a643b81 "bibtex main"
-  "main.out" 1749921148.15374 2817 cb1e57cceb88ac10f0dd77979646146c "pdflatex"
+  "main.aux" 1749922486.82506 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "main.bbl" 1749922486.9128 0 d41d8cd98f00b204e9800998ecf8427e "bibtex main"
+  "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1749921146.15939 3595 0b1b2a55399c6227f627bb0628ea33c8 ""
   "samenvatting.tex" 1749903949.53338 822 ff0944730723cf832f3d298d219df4ce ""
   "sections/1_inleiding.tex" 1749920290.32219 4983 820084356468afabb1abc835444c2a4e ""
   "sections/2_theoretisch.tex" 1749921146.15822 20363 807ce77d30ac240f68dd7c8a031913da ""
-  "sections/3_methodologie.tex" 1749921146.16245 4399 33c5a55d3c8603c2128f0de07fa3aa84 ""
+  "sections/3_methodologie.tex" 1749922485.46171 701 0d8f5b27237f637be2639c5fd91bee28 ""
   (generated)
   "main.aux"
   "main.log"
