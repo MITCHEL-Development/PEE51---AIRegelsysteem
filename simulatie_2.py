@@ -1,9 +1,11 @@
 import random
+import os
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider
 import matplotlib.animation as animation
 import csv
 import atexit
+from datetime import datetime
 # Simulatieparameters
 dt = 0.01  # tijdstap (s)
 h_min = 0.05  # minimale doelhoogte (m)
@@ -12,7 +14,7 @@ h_max = 1.0   # maximale doelhoogte (m)
 
 
 
-max_random_updates = 100+1  # maximaal aantal keren dat de doelhoogte willekeurig aangepast wordt
+max_random_updates = 100000+1  # maximaal aantal keren dat de doelhoogte willekeurig aangepast wordt
 random_update_count = 0  # teller
 update_interval = 10  # tijd in seconden tussen automatische doelhoogte-aanpassingen
 
@@ -55,9 +57,13 @@ de_vals = []
 
 # Functie om data naar CSV te schrijven
 def save_to_csv():
-    with open('simulatie_resultaten.csv', 'w', newline='') as csvfile:
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"simulatie_resultaten_{max_random_updates}_{timestamp}.csv"
+    file_exists = os.path.isfile(filename)
+    with open(filename, 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['Tijd (s)', 'Setpoint (m)', 'Hoogte (m)', 'Fout', 'Fout_Integratie', 'Fout_Afgeleide', 'PWM'])
+        if not file_exists:
+            writer.writerow(['Tijd (s)', 'Setpoint (m)', 'Hoogte (m)', 'Fout', 'Fout_Integratie', 'Fout_Afgeleide', 'PWM'])
         for t, setp, h_val, e, e_s, d, u_val in zip(time_vals, h_target_vals, h_vals, e_vals, e_sum_vals, de_vals, u_vals):
             writer.writerow([f"{t:.6f}", f"{setp:.6f}", f"{h_val:.6f}", f"{e:.6f}", f"{e_s:.6f}", f"{d:.6f}", f"{u_val:.6f}"])
 
@@ -71,7 +77,8 @@ def run_simulatie_versneld():
         if int(t // update_interval) != int((t - dt) // update_interval):
             h_target = random.uniform(h_min, h_max)
             random_update_count += 1
-            print(f"counter {random_update_count}")
+            if random_update_count % 100 == 0:
+                print(f"counter {random_update_count}")
 
         e = h_target - h
         e_sum += e * dt
@@ -98,7 +105,7 @@ def run_simulatie_versneld():
 
         t += dt
 
-versneld = False  # Zet op False als je de animatie wilt gebruiken
+versneld = True  # Zet op False als je de animatie wilt gebruiken
 if versneld:
     run_simulatie_versneld()
     save_to_csv()
