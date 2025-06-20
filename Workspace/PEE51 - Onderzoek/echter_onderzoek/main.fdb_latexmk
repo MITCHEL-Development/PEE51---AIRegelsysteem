@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1750410449.68005 "main.aux" "main.bbl" "main" 1750410450.51821 0
+["bibtex main"] 1750410449.68005 "main.aux" "main.bbl" "main" 1750412071.35137 0
   "./references.bib" 1749924593.22025 835 97dbf9762b62a81e3d146e0c51827392 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1750410450.32376 5070 cb269b2dbbdc3434aacbf0271dd16b4b "pdflatex"
+  "main.aux" 1750412071.12897 5070 cb269b2dbbdc3434aacbf0271dd16b4b "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1750410449.7672 "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/Workspace/PEE51 - Onderzoek/echter_onderzoek/main.tex" "main.pdf" "main" 1750410450.51832 0
+["pdflatex"] 1750412070.35435 "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/Workspace/PEE51 - Onderzoek/echter_onderzoek/main.tex" "main.pdf" "main" 1750412071.35148 0
   "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/Workspace/PEE51 - Onderzoek/echter_onderzoek/main.tex" 1750410372.48432 3593 e0d7aa4f98d33334f82a131ff93a0a8a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc" 1561323594 2496 4d35740f3a177992ff7b134746c0a1db ""
@@ -134,13 +134,13 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1739805417 8221424 01c16b3167dbbbfe89317ec208a5b945 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "afbeeldingen/Neuraalnetwerkpng.png" 1749900028.86383 50949 b6804be9795e464c00052c13005698fe ""
-  "main.aux" 1750410450.32376 5070 cb269b2dbbdc3434aacbf0271dd16b4b "pdflatex"
+  "main.aux" 1750412071.12897 5070 cb269b2dbbdc3434aacbf0271dd16b4b "pdflatex"
   "main.bbl" 1750410449.7655 615 0715f4b48678812c635475797868ef10 "bibtex main"
-  "main.out" 1750410450.32435 5854 0debfe64942bb9bbcd313d293a1ba0b3 "pdflatex"
+  "main.out" 1750412071.12958 5854 0debfe64942bb9bbcd313d293a1ba0b3 "pdflatex"
   "main.tex" 1750410372.48432 3593 e0d7aa4f98d33334f82a131ff93a0a8a ""
   "samenvatting.tex" 1749903949.53338 822 ff0944730723cf832f3d298d219df4ce ""
-  "sections/1_inleiding.tex" 1749924607.37432 4950 143ccd88cd63a3059e09ed583b62d1e9 ""
-  "sections/2_theoretisch.tex" 1749923299.10973 20382 9f67101c16218d7c462e0899b0af1735 ""
+  "sections/1_inleiding.tex" 1750410988.8799 4919 622dd7c5515b9365fcc1e9546982ae82 ""
+  "sections/2_theoretisch.tex" 1750412070.08494 20387 1fbb61e1053b8fa09cb0d0e133c66ed5 ""
   "sections/3_methodologie.tex" 1749924998.10375 3819 79fad3ece23a337eb90d38c5ddd516e8 ""
   "sections/4_resultaten.tex" 1749923295.95121 678 b96e4941361403748ec76af25a27c342 ""
   "sections/5_discussie.tex" 1749923296.6175 689 346dfff08d51ace85395c93f5d5aff00 ""
