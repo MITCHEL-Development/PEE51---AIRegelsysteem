@@ -1,0 +1,136 @@
+\documentclass[a4paper,9pt]{extarticle}
+\usepackage[dutch]{babel}
+% Package to make citations superscrit with brackets
+\usepackage[super,square]{natbib}
+\RequirePackage{times}
+\usepackage[scaled]{inconsolata}
+\usepackage{graphicx} 
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage[hypcap=true]{caption}  % of report, book, etc.
+\titleformat{\section}
+  {\normalfont\LARGE\bfseries}
+  {\thesection}{1em}{}  
+
+
+
+% Package to change margin size
+\usepackage{anysize}
+\marginsize{1.5cm}{1.5cm}{1cm}{1cm}
+
+\usepackage{lastpage}
+
+\usepackage{listings}
+% Package to make headers
+
+
+\usepackage{xcolor}
+% Kleuren gebaseerd op je screenshot
+\definecolor{codepurple}{RGB}{153, 0, 102}     
+\definecolor{codeorange}{RGB}{0, 0, 0}         
+\definecolor{codeblue}{RGB}{0, 0, 0}           
+\definecolor{codegreen}{RGB}{0, 128, 0}        
+\definecolor{codegray}{RGB}{0, 0, 0}  
+\definecolor{codedarkblue}{RGB}{0, 0, 139}        % 
+
+ % iets grijzer achtergrond
+\definecolor{background}{RGB}{255, 255, 255}  
+% donkergrijze tekst
+\lstset{
+  language=Python,
+  backgroundcolor=\color{background},
+  basicstyle=\ttfamily\small\color{codegray},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  numbersep=7pt,
+  frame=single,
+  framesep=2pt,
+  rulecolor=\color{codegray},
+  keywordstyle=\color{codepurple},
+  stringstyle=\color{codeorange},
+  identifierstyle=\color{codeblue},
+  commentstyle=\color{codegreen},
+  moredelim=[s][\color{codegreen}]{"""}{"""},
+  showstringspaces=false,
+  aboveskip=1em,
+  belowskip=1em,
+  breaklines=true,
+  breakatwhitespace=true,
+  emph={build_feedforward_model},
+  emphstyle=\color{codedarkblue},
+}
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{}
+% Package for highligths
+\usepackage{soul}
+% Colors for the references links
+\usepackage[dvipsnames]{xcolor}
+% Package to link references
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=CadetBlue,
+    filecolor=CadetBlue,      
+    urlcolor=CadetBlue,
+}
+% Package for lorem ipsum
+%\usepackage{lipsum}
+% Package for multicolumn
+\usepackage{multicol}
+% Package for removing paragraph identations
+\usepackage{parskip}
+\setlength\columnsep{18pt}
+% Sets bastract
+\renewenvironment{abstract}
+ {\par\noindent\textbf{Samenvatting}\ \ignorespaces \\}
+ {\par\noindent\medskip}
+
+\begin{document}
+% Makes header
+\pagestyle{fancy}
+\fancyhead[R]{\textit{PEE51}}
+\fancyhead[C]{\textit{Elektrotechniek}}
+\fancyhead[L]{\textit{Hogeschool Rotterdam}}
+\fancyfoot[L]{M. Reints \& T. van Ommeren}
+\fancyfoot[C]{}
+\fancyfoot[R]{pagina \thepage\ van \pageref{LastPage}}
+% Makes footnotes with an asterisk
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\begin{center}
+  \huge{\textbf{Is het mogelijk om een PID controller te vervangen door een AI?}} \\
+  \vspace{0.2cm}
+
+\vspace{0.2cm}
+\normalsize
+Mitchel Reints - \href{mailto:1040953@hr.nl}{1040953@hr.nl} \\
+Thomas van Ommeren - \href{mailto:1033239@hr.nl}{1033239@hr.nl} \\
+\vspace{0.1cm}
+\textit{Hogeschool Rotterdam - Elektrotechniek - PEE51} 
+\vspace{0.1cm} \\
+\today
+\medskip
+\normalsize
+\end{center}
+\begin{abstract}
+\input{samenvatting.tex}
+\end{abstract}
+{\color{gray}\hrule}
+\begin{multicols}{2}
+\input{./sections/1_inleiding.tex}
+\input{./sections/2_theoretisch.tex}
+\input{./sections/3_methodologie.tex}
+\input{./sections/4_resultaten.tex}
+\input{./sections/5_discussie.tex}
+\input{./sections/6_conclusie.tex}
+\bibliographystyle{plain}
+\bibliography{references}
+%\input{./begrippenlijst.tex}
+\end{multicols}
+
+\titleformat{\section}
+  {\normalfont\LARGE\bfseries}
+  {\thesection}{1em}{} 
+%\input{Bijlagen.tex} 
+\end{document}

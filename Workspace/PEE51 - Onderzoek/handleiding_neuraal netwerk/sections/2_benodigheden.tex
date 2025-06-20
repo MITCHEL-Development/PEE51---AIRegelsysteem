@@ -1,0 +1,51 @@
+\setlength{\headheight}{14.49998pt}
+\titleformat{\section}
+  {\normalfont\LARGE\bfseries\centering}
+  {\thesection}{1em}{}  
+%\tableofcontents
+
+\section{Benodigheden}
+Voor dat we aan de slag kunnen met het neuraal netwerk, zijn er een aantal benodigdheden die we moeten installeren. Voor het installeren van de juiste packages en het opzetten van de omgeving, is het belangrijk om te zorgen dat je de juiste versie van Python en de benodigde bibliotheken hebt. De handleiding gaat ervan uit dat je bekend bent met de basisprincipes van Python en hoe je een Python-omgeving kunt opzetten. Als je nog niet bekend bent met Python, raden we aan om eerst een introductiecursus te volgen of de officiële documentatie te lezen. Deze benodigdheden zijn:
+
+Deze benodigdheden zijn essentieel voor het ontwikkelen, trainen en evalueren van het neuraal netwerk. Hieronder worden deze benodigdheden kort toegelicht:
+\begin{itemize}
+  \item \textbf{Python 3.10 of hoger:} De programmeertaal waarin het neuraal netwerk wordt ontwikkeld. Zorg ervoor dat je de nieuwste versie van Python hebt geïnstalleerd.
+  \item \textbf{TensorFlow 2.11 of hoger:} Een populaire open-source bibliotheek voor machine learning en deep learning, die wordt gebruikt om neurale netwerken te bouwen en te trainen.
+  \item \textbf{NumPy:} Een fundamentele bibliotheek voor wetenschappelijk rekenen in Python, die wordt gebruikt voor het werken met arrays en wiskundige functies.
+  \item \textbf{Matplotlib:} Een bibliotheek voor het maken van visualisaties in Python, die nuttig is voor het plotten van resultaten en het visualiseren van data.
+  \item \textbf{Jupyter Notebook (optioneel):} Een interactieve omgeving voor het schrijven en uitvoeren van Python-code, die handig is voor het ontwikkelen en testen van het neuraal netwerk.
+  \item \textbf{Een teksteditor of IDE:} Een omgeving waarin je de Python-code kunt schrijven en uitvoeren. Populaire keuzes zijn Visual Studio Code, PyCharm of Jupyter Notebook.
+
+\end{itemize}
+
+Tijdens het doorlopen van de stappen in deze handleiding worden alle geïmporteerde pakketten en hun toepassing in de code uitvoerig toegelicht, zodat duidelijk wordt waarom elk pakket nodig is.
+\subsection*{Versies van gebruikte pakketten}
+Voor dit project zijn de volgende pakketversies gebruikt om compatibiliteit en reproduceerbaarheid te waarborgen:
+\begin{itemize}
+  \item \textbf{Pandas:} 2.2.3
+  \item \textbf{NumPy:} 1.26.4
+  \item \textbf{Matplotlib:} 3.10.1
+  \item \textbf{TensorFlow:} 2.15.0
+  \item \textbf{Keras:} 2.15.0
+\end{itemize}
+
+De onderstaande pakketten zijn in dit project gebruikt en worden in de code geïmporteerd. Zorg ervoor dat je ze allemaal installeert voordat je aan de slag gaat:
+\begin{itemize}
+  \item \textbf{pandas, numpy, matplotlib:} voor data-analyse en visualisatie
+  \item \textbf{tensorflow, keras:} voor het bouwen, trainen en evalueren van het neuraal netwerk
+  \item \textbf{scikit-learn:} voor dataset splitsing en normalisatie
+\end{itemize}
+Hieronder staat een voorbeeld van de benodigde imports in Python. Deze code moet aan het begin van je Python-script of Jupyter Notebook worden toegevoegd om de benodigde bibliotheken te importeren:
+\begin{lstlisting}[language=Python, numbers=left, breaklines=true, basicstyle=\ttfamily\scriptsize]
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import tensorflow as tf
+from tensorflow import keras
+from keras import layers, models, callbacks, preprocessing
+from sklearn.model_selection import train_test_split 
+from keras.layers import Input, Dense, Conv1D, Flatten
+from keras.models import Model, Sequential
+from sklearn.preprocessing import MinMaxScaler
+import keras
+\end{lstlisting}

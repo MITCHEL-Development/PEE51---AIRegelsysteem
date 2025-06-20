@@ -1,0 +1,53 @@
+\vspace{0.3cm}
+{\color{gray}\hrule}
+\section{Aanpak}
+\vspace{0.3cm}
+{\color{gray}\hrule}
+
+\subsection{Data}
+Voor dit deelonderzoek wordt trainingsdata verzameld in een gesimuleerde omgeving waarin de traditionele PID-regelaar actief is. De verzamelde gegevens bestaan uit:
+
+\begin{itemize}
+    \item De gewenste hoogte (setpoint)
+    \item De gemeten werkelijke hoogte van de pingpongbal
+    \item De door de PID-regelaar gegenereerde aanstuurwaarde (bijv. PWM-percentage)
+\end{itemize}
+
+Deze data worden gestructureerd als input-output-paren waarmee het neuraal netwerk wordt getraind. De variatie in setpoints en omgevingscondities wordt meegenomen om het model robuust te maken.
+
+\subsection{Methode}
+De volgende methoden worden toegepast binnen het onderzoek:
+  
+\begin{enumerate}
+    \item Analyse van de bestaande PID-regelaar in de simulatieomgeving.
+    \item Verzamelen en opschonen van trainingsdata.
+    \item Selectie van een geschikte netwerkarchitectuur (bijv. feedforward netwerk).
+    \item Opzetten van de trainingsomgeving in Python (bijv. TensorFlow of PyTorch).
+    \item Trainen van het model met gebruik van de gestructureerde data.
+    \item Evaluatie van de prestaties op basis van simulatie-uitvoer, zoals foutmarge, stabiliteit en convergeersnelheid.
+    \item Exporteren van het getrainde model voor overdracht naar Team 2.
+\end{enumerate}
+  
+Tijdens het trainen worden verschillende hyperparameters getest, zoals het aantal lagen, neuronen per laag, activatiefuncties en optimalisatiemethoden (zoals Adam of SGD).
+
+\subsection{Planning}
+
+  
+De werkzaamheden van Team 1 zijn verdeeld over de looptijd van het project zoals hieronder weergegeven:
+  
+\begin{table}[ht!]
+\centering
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Week} & \textbf{Activiteit} \\
+\hline
+Week 1–2 & Analyse van PID-regelaar en opzetten simulatieomgeving \\
+Week 3–4 & Verzamelen en opschonen van trainingsdata \\
+Week 5–6 & Ontwerp en training van het neuraal netwerk \\
+Week 7   & Validatie van het model en prestatievergelijking met PID \\
+Week 8   & Finaliseren van het model, documentatie en overdracht aan Team 2 \\
+Week 9–10 & Ondersteuning bij presentatie en reflectie op de resultaten \\
+\hline
+\end{tabular}
+\caption{Planning Team 1 gedurende het project}
+\end{table}

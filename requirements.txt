@@ -1,10 +1,10 @@
-# This file is for specifying the dependencies of the project.
-# It is used by pip to install the required packages.
-# You can install the dependencies using the following command:
+# Dit bestand is bedoeld om de afhankelijkheden van het project te specificeren.
+# Het wordt gebruikt door pip om de vereiste pakketten te installeren.
+# Je kunt de afhankelijkheden installeren met het volgende commando:
 # pip install -r requirements.txt
-# Make sure to keep this file updated with the latest dependencies.
-# Example dependencies
-# You can add your project-specific dependencies below.
+# Zorg ervoor dat je dit bestand up-to-date houdt met de nieuwste afhankelijkheden.
+# Voorbeeld afhankelijkheden
+# Je kunt hieronder je project-specifieke afhankelijkheden toevoegen.
 # numpy==1.24.2
 # requests>=2.26.0,<3.0.0
 # pandas>=1.5.0
@@ -14,11 +14,7 @@
 
 
 
-pytest
-black
-flake8
 numpy
-flask
 pandas
 tensorflow
 sklearn
