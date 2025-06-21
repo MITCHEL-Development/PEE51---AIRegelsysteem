@@ -24,15 +24,16 @@ Het verzamelen van trainingsdata vormt een cruciale stap in het opzetten van een
 
 \begin{enumerate}
     \item \textbf{PID-kopie:} Het neuraal netwerk wordt getraind op data afkomstig van een werkende PID-regelaar. Het doel is om het gedrag van de PID exact na te bootsen. Deze aanpak vereist een goed afgestemde PID als referentie en resulteert in een AI-model dat functioneert binnen dezelfde prestatiegrenzen als de oorspronkelijke regelaar. Een nadeel is de benodigde werkende PID.
-    \item \textbf{Ideale responscurve:} Hierbij wordt de AI getraind op een theoretisch bepaalde ideale curve, waarin de hoogte van de pingpongbal over de tijd een gewenst verloop volgt (zie bijvoorbeeld Tabel~X1). Dit biedt meer flexibiliteit bij het verbeteren van de prestaties, maar vereist een nauwkeurige definitie van het gewenste gedrag. Een nadeel is dat kleine afwijkingen in setpoints relatief trage correcties veroorzaken in vergelijking met grote setpointveranderingen.
+    \item \textbf{Ideale responscurve:} Hierbij wordt de AI getraind op een theoretisch bepaalde ideale curve, waarin de hoogte van de pingpongbal over de tijd een gewenst verloop volgt (zie bijvoorbeeld zie Figuur~\ref{fig:manieren_van_dataverzameling}). Dit biedt meer flexibiliteit bij het verbeteren van de prestaties, maar vereist een nauwkeurige definitie van het gewenste gedrag. Een nadeel is dat kleine afwijkingen in setpoints relatief trage correcties veroorzaken in vergelijking met grote setpointveranderingen.
     \item \textbf{Iteratieve benadering:} Deze methode combineert de bovenstaande methoden. In de eerste fase wordt het netwerk getraind op data van een PID. Vervolgens worden verbeteringen aangebracht met behulp van de ideale curve. Deze methode maakt snelle en gecontroleerde iteratieve verbeteringen mogelijk.
 \end{enumerate}
 
 \begin{center}
 \centering
 \includegraphics[width=0.45\textwidth]{./afbeeldingen/dataverzameling.png}
-\label{fig:manieren van dataverzameling voor het trainen van het neuraal netwerk}
 \captionof{figure}{manieren van dataverzameling}
+\label{fig:manieren_van_dataverzameling}
+
 \end{center}
 
 De initiële dataset werd gegenereerd door middel van simulaties, waarin een bestaande PID-regelaar werd nagebootst. Dit leverde gestructureerde gegevens op, waaronder: tijdstap, setpoint, werkelijke hoogte, fout (setpoint - gemeten waarde), geïntegreerde fout, afgeleide fout en de bijbehorende PWM-waarde.
@@ -47,22 +48,22 @@ Voor zowel de simulatie van de pingpongbal-opstelling als het opzetten en traine
 \begin{itemize}
     \item \textbf{NumPy} en \textbf{Pandas}: voor het verwerken en analyseren van data;
     \item \textbf{Matplotlib} voor visualisatie van resultaten;
-    \item \textbf{TensorFlow} en \textbf{Keras}: voor het bouwen, trainen en valideren van het neuraal netwerk;
+    \item \textbf{TensorFlow}\cite{TensorFlowTutorials2024} en \textbf{Keras}: voor het bouwen, trainen en valideren van het neuraal netwerk;
     \item \textbf{Scikit-learn}: voor data preprocessing en evaluatiemethoden;
     \item \textbf{Jupyter Notebook}: voor het ontwikkelen en testen van de code in iteraties.
 \end{itemize}
 
 \subsection{Dataverzameling}
 
-De trainingsdata voor het neuraal netwerk is verzameld door een simulatie van de bestaande PID-regelaar. In deze simulatie werd het gedrag van de PID-regelaar gelogd terwijl deze een pingpongbal op verschillende hoogtes stabiel probeerde te houden. Hierbij zijn gegevens zoals tijd, doelhoogte, werkelijke hoogte, fout, fout integratie, fout afgeleide en bijbehorende PWM-waarden opgeslagen (zie Figuur~\ref{fig:PID gesimuleerde data}).
+De trainingsdata voor het neuraal netwerk is verzameld door een simulatie van de bestaande PID-regelaar. In deze simulatie werd het gedrag van de PID-regelaar gelogd terwijl deze een pingpongbal op verschillende hoogtes stabiel probeerde te houden. Hierbij zijn gegevens zoals tijd, doelhoogte, werkelijke hoogte, fout, fout integratie, fout afgeleide en bijbehorende PWM-waarden opgeslagen (zie Figuur~\ref{fig:PID_gesimuleerde_data}).
 
 De data werd vervolgens gesplitst in een trainingsset (80\%) en een validatieset (20\%). De trainingsset werd gebruikt om het model te trainen, terwijl de validatieset diende om de prestaties van het model te evalueren tijdens de training. Dit helpt overfitting te voorkomen en zorgt ervoor dat het model generaliseerbaar blijft naar nieuwe data.
 
 \begin{center}
 \centering
 \includegraphics[width=0.45\textwidth]{./afbeeldingen/data.png}
-\label{fig:PID gesimuleerde data}
 \captionof{figure}{PID gesimuleerde data}
+\label{fig:PID_gesimuleerde_data}
 \end{center}
 
 \subsection{Neuraal netwerk opzetting}
@@ -76,6 +77,9 @@ De architectuur van het netwerk bestaat uit:
     \item Een flatten-laag gevolgd door één dense laag;
     \item Een outputlaag die de benodigde PWM-waarde voorspelt.
 \end{itemize}
+De volledige code van het neuraal netwerk is openbaar beschikbaar op GitHub.\footnote{\url{https://github.com/MITCHEL-Development/PEE51---AIRegelsysteem/tree/main/03_NN-Handleiding}} De code is geschreven in Python en maakt gebruik van TensorFlow en Keras voor de implementatie van het neuraal netwerk. Daarnaast is er een handleiding toegevoegd, zodat gebruikers eenvoudig stap voor stap door het proces kunnen lopen en het netwerk zelf kunnen opzetten en trainen.
+
+
 
 \subsection{Trainingsstrategie en hyperparameters tuning}
 Het model is getraind met behulp van backpropagation en de Adam optimizer. De volgende hyperparameters zijn getest en afgestemd:

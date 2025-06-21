@@ -18,22 +18,22 @@
 
 \subsection{Resultaten van de getrainde modellen}
 Tijdens het trainen van het neuraal netwerk is gebruik gemaakt van zowel een trainingsset (80\%) van de data als een validatieset (20\%) om het leerproces van het model te volgen. De prestaties van het model werden geëvalueerd aan de hand van de training en validation loss. De training loss geeft aan hoe goed het model presteert op de trainingsdata, terwijl de validation loss inzicht geeft in de prestaties op nieuwe data, en daarmee de precisie van het netwerk.
-In figuur X2 is te zien dat het model verschuift naar een training loss van 0.00413 en een validation loss van 0.00160. Deze relatief lage waardes wijzen op een goed getraind model. Het verschil tussen beide verliezen suggereert dat er geen sprake is van significante overfitting of underfitting.
+In figuur~\ref{fig:train_en_validation_loss} is te zien dat het model verschuift naar een training loss van 0.00413 en een validation loss van 0.00160. Deze relatief lage waardes wijzen op een goed getraind model. Het verschil tussen beide verliezen suggereert dat er geen sprake is van significante overfitting of underfitting.
 \begin{center}
 \centering
 \includegraphics[width=0.45\textwidth]{./afbeeldingen/loss.png}
-\label{fig:train en validation loss}
 \captionof{figure}{Training en validation loss van het neuraal netwerk}
+\label{fig:train_en_validation_loss}
 \end{center}
 
 \subsection{vergelijking met de PID-regelaar}
-Om het model te kunnen vergelijken met de traditionele PID-regelaar, zijn beide regelstrategieën getest in dezelfde simulatieomgeving. Hierbij werd gekeken naar de prestaties op responsietijd, stabiliteit, overshoot en robuustheid. In tabel X3 is een overzicht opgenomen van de meetresultaten. Hieruit blijkt dat het getrainde neuraal netwerk een vergelijkbare prestatie levert als de PID-regelaar in termen van hoogtecontrole van de pingpongbal. Het model wist de gewenste hoogte nauwkeurig te benaderen met een vergelijkbare stabiliteit en minder overshoot in sommige scenario’s.
+Om het model te kunnen vergelijken met de traditionele PID-regelaar, zijn beide regelstrategieën getest in dezelfde simulatieomgeving. Hierbij werd gekeken naar de prestaties op responsietijd, stabiliteit, overshoot en robuustheid. In figuur~\ref{fig:vergelijking_met_PID} is een overzicht opgenomen van de meetresultaten. Hieruit blijkt dat het getrainde neuraal netwerk een vergelijkbare prestatie levert als de PID-regelaar in termen van hoogtecontrole van de pingpongbal. Het model wist de gewenste hoogte nauwkeurig te benaderen met een vergelijkbare stabiliteit en minder overshoot in sommige scenario’s. De resultaten van deze vergelijking zijn tevens weergegeven 
 
 \begin{center}
 \centering
 \includegraphics[width=0.45\textwidth]{./afbeeldingen/vergelijking.png}
-\label{fig:vergelijking met PID}
 \captionof{figure}{Vergelijking van de prestaties van het neuraal netwerk en de PID-regelaar}
+\label{fig:vergelijking_met_PID}
 \end{center}
 
 

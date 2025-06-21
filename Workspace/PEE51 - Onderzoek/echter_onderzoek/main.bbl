@@ -1,9 +1,27 @@
 \begin{thebibliography}{1}
 
+\bibitem{Franklin1995_PID}
+Stan Franklin.
+\newblock {\em Artificial Minds}.
+\newblock MIT Press, Cambridge, MA, 1995.
+\newblock Zie p. 293.
+
 \bibitem{GeeksRNN2024}
 GeeksforGeeks.
 \newblock Recurrent neural networks (rnn) - geeksforgeeks, 2024.
 \newblock Accessed: 2024-06-01.
+
+\bibitem{Haykin2009_recurrent}
+Simon Haykin.
+\newblock {\em Neural Networks and Learning Machines}.
+\newblock Pearson Education, Upper Saddle River, NJ, 3rd edition, 2009.
+\newblock Zie p. 23.
+
+\bibitem{Haykin2009_convolutional}
+Simon Haykin.
+\newblock {\em Neural Networks and Learning Machines}.
+\newblock Pearson Education, Upper Saddle River, NJ, 3rd edition, 2009.
+\newblock Zie p. 201.
 
 \bibitem{NXP2025_datasheet}
 {NXP Semiconductors}.
@@ -11,9 +29,19 @@ GeeksforGeeks.
 \newblock \url{https://www.nxp.com/docs/en/data-sheet/MCXNx4xDS.pdf}, 2025.
 \newblock Product Data Sheet, Rev. 7 — 25 January 2025.
 
-\bibitem{WikipediaPID2025}
+\bibitem{TensorFlowTutorials2024}
+{TensorFlow}.
+\newblock Tensorflow tutorials, 2024.
+\newblock Accessed: 2024-06-14.
+
+\bibitem{Vijayvargia2018}
+Abhishek Vijayvargia.
+\newblock {\em Machine Learning with Python: Design and Develop Machine Learning and Deep Learning Systems Using Real-World Examples}.
+\newblock BPB Publications, 2018.
+
+\bibitem{WikipediaPID2024}
 {Wikipedia contributors}.
-\newblock Pid-regelaar --- wikipedia{,} de vrije encyclopedie, 2025.
-\newblock Accessed: 2025-06-14.
+\newblock Pid-regelaar --- wikipedia{,} de vrije encyclopedie, 2024.
+\newblock Accessed: 2024-06-01.
 
 \end{thebibliography}

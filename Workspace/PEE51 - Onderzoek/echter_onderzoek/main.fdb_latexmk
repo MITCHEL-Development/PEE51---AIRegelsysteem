@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1750494126.59099 "main.aux" "main.bbl" "main" 1750494127.57671 0
-  "./references.bib" 1749924593.22025 835 97dbf9762b62a81e3d146e0c51827392 ""
+["bibtex main"] 1750498312.18825 "main.aux" "main.bbl" "main" 1750498313.21124 0
+  "./references.bib" 1750498275.24184 2162 21616032cb56214cc113fa5d3363b67b ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1750494127.37479 6245 163b60c4603a4e329ea8a5e55a2483bd "pdflatex"
+  "main.aux" 1750498313.01131 6628 57b167645747e167dba62a942264d1d5 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1750494126.67448 "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/Workspace/PEE51 - Onderzoek/echter_onderzoek/main.tex" "main.pdf" "main" 1750494127.57683 0
+["pdflatex"] 1750498312.26824 "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/Workspace/PEE51 - Onderzoek/echter_onderzoek/main.tex" "main.pdf" "main" 1750498313.21135 0
   "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/Workspace/PEE51 - Onderzoek/echter_onderzoek/main.tex" 1750410372.48432 3593 e0d7aa4f98d33334f82a131ff93a0a8a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc" 1561323594 2496 4d35740f3a177992ff7b134746c0a1db ""
@@ -138,15 +138,15 @@
   "afbeeldingen/dataverzameling.png" 1750493016.50232 86211 e20887491d911c062ecdf5ed1409fb3a ""
   "afbeeldingen/loss.png" 1750492343.21447 44162 210dc96efe77783acd3851920a5f223c ""
   "afbeeldingen/vergelijking.png" 1750492568.37394 52891 94cbf63e8ef8cc383aa1d0c3f8819775 ""
-  "main.aux" 1750494127.37479 6245 163b60c4603a4e329ea8a5e55a2483bd "pdflatex"
-  "main.bbl" 1750494126.67215 615 0715f4b48678812c635475797868ef10 "bibtex main"
-  "main.out" 1750494127.37565 6068 750775cb9b56362d6b6e613816e3f7be "pdflatex"
+  "main.aux" 1750498313.01131 6628 57b167645747e167dba62a942264d1d5 "pdflatex"
+  "main.bbl" 1750498312.26635 1486 166ada85fc4e9eeae69fad8e65d7d509 "bibtex main"
+  "main.out" 1750498313.01217 6068 750775cb9b56362d6b6e613816e3f7be "pdflatex"
   "main.tex" 1750410372.48432 3593 e0d7aa4f98d33334f82a131ff93a0a8a ""
   "samenvatting.tex" 1750494125.421 1415 27d82f32c78d695ce2e01b6cd49adca9 ""
-  "sections/1_inleiding.tex" 1750410988.8799 4919 622dd7c5515b9365fcc1e9546982ae82 ""
-  "sections/2_theoretisch.tex" 1750412070.08494 20387 1fbb61e1053b8fa09cb0d0e133c66ed5 ""
-  "sections/3_methodologie.tex" 1750493720.69584 7392 715d1998b7e28525a9c6fcc6cdbe6ba6 ""
-  "sections/4_resultaten.tex" 1750493330.42261 3563 994661d486be9cd6663084abf8930bee ""
+  "sections/1_inleiding.tex" 1750497771.30344 4784 50f7da39ee1674e5e9d43bffe807ca8c ""
+  "sections/2_theoretisch.tex" 1750498309.77397 20490 285318762757e3f10613beda55b18c80 ""
+  "sections/3_methodologie.tex" 1750496619.9944 7891 5c9f570136ad83b60b13431524193274 ""
+  "sections/4_resultaten.tex" 1750496381.45669 3685 d6a48ff652e58193a03f0d41f7844f97 ""
   "sections/5_discussie.tex" 1750492868.20952 2303 8b226217d2f5c752f5eb3998f1c99721 ""
   "sections/6_conclusie.tex" 1750492868.06475 2458 8baa9c9e1e4b05caf112a2ff2d1f67d0 ""
   (generated)
