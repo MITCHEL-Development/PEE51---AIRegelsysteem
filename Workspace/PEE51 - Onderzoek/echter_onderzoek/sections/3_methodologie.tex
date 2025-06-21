@@ -17,7 +17,29 @@
 
 \section{Methode}
 
-In dit hoofdstuk wordt beschreven op welke manier het onderzoek is uitgevoerd. De focus ligt op de software-omgeving, de manier van dataverzameling, de opbouw en training van het neuraal netwerk, en de testomgeving waarin het model is geëvalueerd.
+In dit hoofdstuk wordt beschreven op welke wijze het onderzoek is uitgevoerd. De nadruk ligt op de gebruikte software, de strategie voor dataverzameling, de opbouw en training van het neuraal netwerk, en de testomgeving waarin de prestaties van het model zijn geëvalueerd. Er is specifiek rekening gehouden met de beperkingen van de NXP FRDM-MCXN947 microcontroller.
+
+\subsection{Manieren van dataverzameling}
+Het verzamelen van trainingsdata vormt een cruciale stap in het opzetten van een neuraal netwerk voor regeltoepassingen. De gekozen methode heeft directe invloed op de prestaties van het model. Binnen dit onderzoek zijn drie methodes onderzocht voor het trainen van de AI:
+
+\begin{enumerate}
+    \item \textbf{PID-kopie:} Het neuraal netwerk wordt getraind op data afkomstig van een werkende PID-regelaar. Het doel is om het gedrag van de PID exact na te bootsen. Deze aanpak vereist een goed afgestemde PID als referentie en resulteert in een AI-model dat functioneert binnen dezelfde prestatiegrenzen als de oorspronkelijke regelaar. Een nadeel is de benodigde werkende PID.
+    \item \textbf{Ideale responscurve:} Hierbij wordt de AI getraind op een theoretisch bepaalde ideale curve, waarin de hoogte van de pingpongbal over de tijd een gewenst verloop volgt (zie bijvoorbeeld Tabel~X1). Dit biedt meer flexibiliteit bij het verbeteren van de prestaties, maar vereist een nauwkeurige definitie van het gewenste gedrag. Een nadeel is dat kleine afwijkingen in setpoints relatief trage correcties veroorzaken in vergelijking met grote setpointveranderingen.
+    \item \textbf{Iteratieve benadering:} Deze methode combineert de bovenstaande methoden. In de eerste fase wordt het netwerk getraind op data van een PID. Vervolgens worden verbeteringen aangebracht met behulp van de ideale curve. Deze methode maakt snelle en gecontroleerde iteratieve verbeteringen mogelijk.
+\end{enumerate}
+
+\begin{center}
+\centering
+\includegraphics[width=0.45\textwidth]{./afbeeldingen/dataverzameling.png}
+\label{fig:manieren van dataverzameling voor het trainen van het neuraal netwerk}
+\captionof{figure}{manieren van dataverzameling}
+\end{center}
+
+De initiële dataset werd gegenereerd door middel van simulaties, waarin een bestaande PID-regelaar werd nagebootst. Dit leverde gestructureerde gegevens op, waaronder: tijdstap, setpoint, werkelijke hoogte, fout (setpoint - gemeten waarde), geïntegreerde fout, afgeleide fout en de bijbehorende PWM-waarde.
+Het uiteindelijke doel is om het netwerk ook te trainen met data uit een fysieke opstelling. Simulatiedata zijn reproduceerbaar en snel te genereren, maar missen systeemeigenschappen die voortkomen uit hardware-imperfecties. Door aanvullend gebruik te maken van data uit de echte opstelling kunnen robuustere modellen worden ontwikkeld.
+Een bruikbare dataset moet representatief zijn voor diverse systeemcondities. Bij dataverzameling uit de reële opstelling is daarom gelet op variatie in setpoints, verstoringen en afwijkingen in hardwarecomponenten. Het gebruik van meerdere hardware opstellingen elimineert ook de verschillende afwijkingen in hardware en zou dus toepasbaar moeten zijn op verschillende opstellingen. Parameters die consequent zijn meegenomen in de dataset zijn: het setpoint, de actuele hoogte van de bal, de fout, de geïntegreerde fout en de afgeleide fout.
+
+
 
 \subsection{Software en tools}
 
@@ -32,9 +54,16 @@ Voor zowel de simulatie van de pingpongbal-opstelling als het opzetten en traine
 
 \subsection{Dataverzameling}
 
-De trainingsdata voor het neuraal netwerk is verzameld door een simulatie van de bestaande PID-regelaar. In deze simulatie werd het gedrag van de PID-regelaar gelogd terwijl deze een pingpongbal op verschillende hoogtes stabiel probeerde te houden. Hierbij zijn gegevens zoals tijd, doelhoogte, werkelijke hoogte, fout, fout intergratie, fout afgeleide en bijbehorende PWM-waarden opgeslagen.
+De trainingsdata voor het neuraal netwerk is verzameld door een simulatie van de bestaande PID-regelaar. In deze simulatie werd het gedrag van de PID-regelaar gelogd terwijl deze een pingpongbal op verschillende hoogtes stabiel probeerde te houden. Hierbij zijn gegevens zoals tijd, doelhoogte, werkelijke hoogte, fout, fout integratie, fout afgeleide en bijbehorende PWM-waarden opgeslagen (zie Figuur~\ref{fig:PID gesimuleerde data}).
 
-De data werd vervolgens gesplitst in een trainingsset (80\%) en een validatieset (20\%).
+De data werd vervolgens gesplitst in een trainingsset (80\%) en een validatieset (20\%). De trainingsset werd gebruikt om het model te trainen, terwijl de validatieset diende om de prestaties van het model te evalueren tijdens de training. Dit helpt overfitting te voorkomen en zorgt ervoor dat het model generaliseerbaar blijft naar nieuwe data.
+
+\begin{center}
+\centering
+\includegraphics[width=0.45\textwidth]{./afbeeldingen/data.png}
+\label{fig:PID gesimuleerde data}
+\captionof{figure}{PID gesimuleerde data}
+\end{center}
 
 \subsection{Neuraal netwerk opzetting}
 
@@ -53,7 +82,7 @@ Het model is getraind met behulp van backpropagation en de Adam optimizer. De vo
 \begin{itemize}
     \item Learning rate: $0.001$, $0.0005$, $0.0001$;
     \item Batch size: 32 en 64;
-    \item Aantal epochs: 50–200;
+    \item Aantal epochs: 10–100;
     \item Rechthoekige activatievensters: lengte 5–20 samples.
 \end{itemize}
 

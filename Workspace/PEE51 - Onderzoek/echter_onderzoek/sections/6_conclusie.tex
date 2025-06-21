@@ -19,12 +19,33 @@
 
 
 \subsection{Beantwoording van de hoofdvraag}
+\textbf{Is het mogelijk om een PID-regelaar te vervangen door een AI?} \\
+Uit de resultaten van dit onderzoek blijkt dat een neuraal netwerk het gedrag van een PID-regelaar succesvol kan nabootsen. De AI-regelaar presteert vergelijkbaar met de traditionele PID in een gesimuleerde omgeving.
 
-\subsection{Samenvatting van de belangrijke bevindingen}
+\vspace{0.5em}
+
+\subsection{Samenvatting van de belangrijkste bevindingen}
+\begin{itemize}
+  \item Een \textbf{1D Convolutioneel Neuraal Netwerk (1D CNN)} bleek het meest geschikt voor deze toepassing.
+  \item De prestaties van het model kwamen sterk overeen met die van de PID-regelaar.
+  \item Het model is compact genoeg voor implementatie op een embedded systeem.
+  \item De keuze voor een eenvoudige netwerkarchitectuur leidt zowel tot snelheid als robuustheid.
+  \item Validatie met gesimuleerde data toont aan dat de AI in staat is tot stabiele en nauwkeurige regeling.
+\end{itemize}
+
+
 
 \subsection{Aanbevelingen voor implementatie}
+Hoewel TensorFlow Lite ondersteuning biedt voor embedded toepassingen, bleek de EIQ-software van NXP primair gericht op beeldherkenning. Voor praktische implementatie is het daarom aanbevolen om de meegeleverde voorbeeldcode van de NXP FRDM-MCXN947 als basis te gebruiken en deze iteratief, met bijvoorbeeld trunk based development, uit te breiden met het getrainde model. Zo blijft het systeem controleer- en schaalbaar.
 
 \subsection{Suggesties voor vervolgonderzoek}
+Voor vervolgonderzoek wordt het volgende aanbevolen:
+\begin{itemize}
+  \item Het model fysiek implementeren op de microcontroller en de real-time prestaties evalueren.
+  \item Verschillende vormen van trainingsdata vergelijken (reëel vs. simulatie).
+  \item De impact van verstoringen, ruis en sensorgebreken op de robuustheid van het model analyseren.
+  \item Experimenteren met andere netwerkarchitecturen, zoals LSTM's, mits de hardware dit toelaat.
+\end{itemize}
 
 
 

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1750410449.68005 "main.aux" "main.bbl" "main" 1750412071.35137 0
+["bibtex main"] 1750494126.59099 "main.aux" "main.bbl" "main" 1750494127.57671 0
   "./references.bib" 1749924593.22025 835 97dbf9762b62a81e3d146e0c51827392 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1750412071.12897 5070 cb269b2dbbdc3434aacbf0271dd16b4b "pdflatex"
+  "main.aux" 1750494127.37479 6245 163b60c4603a4e329ea8a5e55a2483bd "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1750412070.35435 "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/Workspace/PEE51 - Onderzoek/echter_onderzoek/main.tex" "main.pdf" "main" 1750412071.35148 0
+["pdflatex"] 1750494126.67448 "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/Workspace/PEE51 - Onderzoek/echter_onderzoek/main.tex" "main.pdf" "main" 1750494127.57683 0
   "/Users/mitchelreints/Documents/GitHub/PEE51---AIRegelsysteem/Workspace/PEE51 - Onderzoek/echter_onderzoek/main.tex" 1750410372.48432 3593 e0d7aa4f98d33334f82a131ff93a0a8a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc" 1561323594 2496 4d35740f3a177992ff7b134746c0a1db ""
@@ -134,17 +134,21 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1739805417 8221424 01c16b3167dbbbfe89317ec208a5b945 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "afbeeldingen/Neuraalnetwerkpng.png" 1749900028.86383 50949 b6804be9795e464c00052c13005698fe ""
-  "main.aux" 1750412071.12897 5070 cb269b2dbbdc3434aacbf0271dd16b4b "pdflatex"
-  "main.bbl" 1750410449.7655 615 0715f4b48678812c635475797868ef10 "bibtex main"
-  "main.out" 1750412071.12958 5854 0debfe64942bb9bbcd313d293a1ba0b3 "pdflatex"
+  "afbeeldingen/data.png" 1750493464.78582 52285 af93d8acee68029fe1fbaf73cfe32540 ""
+  "afbeeldingen/dataverzameling.png" 1750493016.50232 86211 e20887491d911c062ecdf5ed1409fb3a ""
+  "afbeeldingen/loss.png" 1750492343.21447 44162 210dc96efe77783acd3851920a5f223c ""
+  "afbeeldingen/vergelijking.png" 1750492568.37394 52891 94cbf63e8ef8cc383aa1d0c3f8819775 ""
+  "main.aux" 1750494127.37479 6245 163b60c4603a4e329ea8a5e55a2483bd "pdflatex"
+  "main.bbl" 1750494126.67215 615 0715f4b48678812c635475797868ef10 "bibtex main"
+  "main.out" 1750494127.37565 6068 750775cb9b56362d6b6e613816e3f7be "pdflatex"
   "main.tex" 1750410372.48432 3593 e0d7aa4f98d33334f82a131ff93a0a8a ""
-  "samenvatting.tex" 1749903949.53338 822 ff0944730723cf832f3d298d219df4ce ""
+  "samenvatting.tex" 1750494125.421 1415 27d82f32c78d695ce2e01b6cd49adca9 ""
   "sections/1_inleiding.tex" 1750410988.8799 4919 622dd7c5515b9365fcc1e9546982ae82 ""
   "sections/2_theoretisch.tex" 1750412070.08494 20387 1fbb61e1053b8fa09cb0d0e133c66ed5 ""
-  "sections/3_methodologie.tex" 1749924998.10375 3819 79fad3ece23a337eb90d38c5ddd516e8 ""
-  "sections/4_resultaten.tex" 1749923295.95121 678 b96e4941361403748ec76af25a27c342 ""
-  "sections/5_discussie.tex" 1749923296.6175 689 346dfff08d51ace85395c93f5d5aff00 ""
-  "sections/6_conclusie.tex" 1749923258.67892 741 18d6515ef9c72302edc2615162b7b806 ""
+  "sections/3_methodologie.tex" 1750493720.69584 7392 715d1998b7e28525a9c6fcc6cdbe6ba6 ""
+  "sections/4_resultaten.tex" 1750493330.42261 3563 994661d486be9cd6663084abf8930bee ""
+  "sections/5_discussie.tex" 1750492868.20952 2303 8b226217d2f5c752f5eb3998f1c99721 ""
+  "sections/6_conclusie.tex" 1750492868.06475 2458 8baa9c9e1e4b05caf112a2ff2d1f67d0 ""
   (generated)
   "main.aux"
   "main.log"

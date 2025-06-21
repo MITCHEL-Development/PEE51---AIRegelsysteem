@@ -19,11 +19,12 @@
 
 
 \subsection{Interpetatie van de resultaten}
-
+De verkregen resultaten tonen aan dat een neuraal netwerk in staat is om het gedrag van een PID-regelaar met hoge nauwkeurigheid na te bootsen. Daarbij is ook rekening gehouden met de hardware beperkingen van de microcontroller. Bovendien maakt het ontwikkelde VSC-bestand het mogelijk om eenvoudig variaties van het netwerk te implementeren of te testen met andere datasets. Dit biedt veel flexibiliteit voor toekomstige optimalisaties of uitbreidingen van het systeem.
 \subsection{Beperkingen van het model}
+De voornaamste beperkingen liggen bij de beschikbare hardware. Zoals besproken in hoofdstuk 2.6 is het geheugen op de microcontroller beperkt, wat het gebruik van grotere of meer geavanceerde modellen, zoals LSTM-netwerken, belemmert. Ook is er geen rekening gehouden met langdurige inzet of prestaties onder extreme omstandigheden, omdat het model nog niet fysiek is getest.
 
 \subsection{Lessen en inzichten}
-
+Gedurende het project werd duidelijk dat eenvoudige modelontwerp vaak gunstiger is, zeker in embedded toepassingen. Daarnaast is het belang van kwaliteit, divers en goed gestructureerde trainingsdata niet te onderschatten. Een iteratieve aanpak in modelontwikkeling en code generatie blijkt essentieel om gericht te verbeteren.
 \subsection{Reflectie op de aanpak}
-
+De gekozen methode – waarbij gestart werd met een kopie van de PID en vervolgens verfijning plaatsvond via trainingsdata – bleek tot huidige prestaties effectief. Het combineren van simulatie en validatie leverde waardevolle inzichten op, terwijl de samenwerking met experts uit het Datalab zorgde voor praktische richtlijnen. Wel hadden sommige onderdelen van de code of trainingsstrategie mogelijk eerder geoptimaliseerd kunnen worden.
 
